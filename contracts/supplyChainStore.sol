@@ -23,7 +23,7 @@ contract SupplyChainStore {
 
     function login(uint256 age) external returns (bool) {
         if (age < minAge) {
-            revert("Your not legal Age in Brazil");
+            revert("Your must be at least 18 years old");
         } else {
             status = Status.LOGGED;
             approvedAccounts[msg.sender] = true;
