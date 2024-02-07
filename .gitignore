@@ -1,2 +1,3 @@
 .vscode
-contracts/artifacts/
+.deps
+**/artifacts
