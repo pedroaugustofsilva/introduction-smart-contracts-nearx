@@ -10,5 +10,5 @@ interface IRealState {
         uint256 _price,
         uint256 _comission,
         uint256 _timeToPay
-    ) external returns (uint256);
+    ) external returns (address);
 }

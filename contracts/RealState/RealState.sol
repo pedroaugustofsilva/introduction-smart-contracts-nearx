@@ -18,10 +18,10 @@ contract RealState is IRealState {
         uint256 _price,
         uint256 _comission,
         uint256 _timeToPay
-    ) onlyOwner external returns (uint256 index) {
+    ) onlyOwner external returns (address propertyAddress) {
         Property property = new Property(address(this), _broker, _propertyOwner, _price, _comission, _timeToPay);
         properties.push(property);
-        index = properties.length - 1;
+        propertyAddress = address(property); 
     }
 
     modifier onlyOwner() {
