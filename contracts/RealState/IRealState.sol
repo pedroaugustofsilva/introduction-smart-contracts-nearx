@@ -8,7 +8,7 @@ interface IRealState {
         address _broker,
         address _owner,
         uint256 _price,
-        uint256 _comission,
+        uint256 _commission,
         uint256 _timeToPay
     ) external returns (address);
 }
