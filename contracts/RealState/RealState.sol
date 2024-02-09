@@ -22,6 +22,8 @@ contract RealState is IRealState {
         Property property = new Property(address(this), _broker, _propertyOwner, _price, _commission, _timeDoubleCommission);
         properties.push(property);
         propertyAddress = address(property); 
+
+        emit PropertyAdded(propertyAddress, _price);
     }
 
     modifier onlyOwner() {

@@ -39,6 +39,8 @@ contract Property is IProperty {
         _balances[broker] += brokerCommission();
         _approvedBuyers[msg.sender] = false;
         currentOwner = msg.sender;
+
+        emit PropertyPurchased(msg.sender, price);
     }
 
     function approveSaleFor(address _buyer) onlyBroker external {

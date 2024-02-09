@@ -10,4 +10,6 @@ interface IProperty {
     function realState() external view returns (address);
     function broker() external view returns (address);
     function price() external view returns (uint256);
+
+    event PropertyPurchased(address indexed buyer, uint256 price);
 }

@@ -14,4 +14,6 @@ interface IRealState {
 
     function owner() external view returns (address);
     function properties(uint256 index) external view returns (Property);
+
+    event PropertyAdded(address indexed propertyAddress, uint256 price);
 }
