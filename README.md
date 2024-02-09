@@ -19,11 +19,36 @@ The primary goals of this repository are:
 
 ## Projects and Contracts
 
-### SupplyChainStore Smart Contract Overview
+### RealState project
+
+This project is a blockchain-based solution to streamline property transactions, making them more transparent, secure, and efficient. It consists of two smart contracts: RealState and Property.
+
+#### Key Features and Functions:
+
+##### RealState Contract:
+* Property Listing: Facilitates the addition of new properties to the market.
+* Owner Privileges: Ensures only the owner of the contract can add new properties.
+* Dynamic Array of Properties: Maintains a list of all properties available for sale.
+
+##### Property Contract:
+* Sale Approval Mechanism: Allows brokers to approve or revoke sale approvals for potential buyers.
+* Secure Purchase Transactions: Manages property purchases, ensuring only approved buyers can buy and the payment meets the property price.
+* Broker Commission Calculation: Implements a dynamic commission system, which can vary based on predefined conditions.
+
+#### Learning Highlights
+
+* Withdraw Pattern: To prevent reentrancy attacks and enhance the contract's security.
+* Access Control: Showcases the use of modifiers for role-based functionality.
+* Interface Implementation: Demonstrates the use of interfaces for contract interaction.
+* Event Logging: Uses events to emit notifications upon significant actions like property addition and sale.
+* Financial Logic: Implements complex financial transactions, including commission calculation and fund distribution.
+
+
+### SupplyChainStore Smart Contract
 
 This smart contract, named SupplyChainStore, is designed for a simplified supply chain scenario, specifically focused on selling products with age-restricted access. It's written in Solidity and demonstrates various key concepts in smart contract development, such as state management, conditional logic, error handling, and Ether transactions.
 
-Key Features and Functions:
+#### Key Features and Functions:
 1. **Age-Restricted Access**: Implements an age verification system to ensure that only users above a specified age (18 years) can access certain functionalities, reflecting compliance with age-related restrictions.
 2. **User Status Tracking**: Employs an enumerated type (enum) to track and manage the various states of user interaction within the contract, such as pending, logged in, made a purchase, or received a product.
 3. **Secure String Comparison**: Utilizes cryptographic functions to safely compare strings, an essential feature for validating product names in transaction processes.
