@@ -17,9 +17,9 @@ contract RealState is IRealState {
         address _propertyOwner,
         uint256 _price,
         uint256 _commission,
-        uint256 _timeToPay
+        uint256 _timeDoubleCommission
     ) onlyOwner external returns (address propertyAddress) {
-        Property property = new Property(address(this), _broker, _propertyOwner, _price, _commission, _timeToPay);
+        Property property = new Property(address(this), _broker, _propertyOwner, _price, _commission, _timeDoubleCommission);
         properties.push(property);
         propertyAddress = address(property); 
     }

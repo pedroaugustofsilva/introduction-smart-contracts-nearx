@@ -9,6 +9,9 @@ interface IRealState {
         address _owner,
         uint256 _price,
         uint256 _commission,
-        uint256 _timeToPay
+        uint256 _timeDoubleCommission
     ) external returns (address);
+
+    function owner() external view returns (address);
+    function properties(uint256 index) external view returns (Property);
 }

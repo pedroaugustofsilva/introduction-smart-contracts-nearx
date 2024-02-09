@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+import "./IProperty.sol";
 
-contract Property {
+contract Property is IProperty {
     address public realState;
     address public broker;
     address private currentOwner;
